@@ -15,7 +15,7 @@ ZSH_THEME="spaceship"
 CASE_SENSITIVE="true"
 
 # zsh tmux settings
-ZSH_TMUX_AUTOSTART='true'
+# ZSH_TMUX_AUTOSTART='true'
 
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
