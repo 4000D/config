@@ -1,3 +1,4 @@
+export CONFIG_HOME=~/config
 export EDITOR=vim
 
 # If you come from bash you might have to change your $PATH.
@@ -92,6 +93,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshrc="$EDITOR ~/.zshrc"
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
+source $CONFIG_HOME/.aliases.onther
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

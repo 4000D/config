@@ -1,0 +1,2 @@
+# onther
+ssh_onther() { ssh onther$1@onther.io -p 5000$1 -i ~/.ssh/onther.pem }
