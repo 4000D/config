@@ -1,2 +1,5 @@
 # onther
 ssh_onther() { ssh onther$1@onther.io -p 5000$1 -i ~/.ssh/onther.pem }
+
+ssh_minerA() { ssh miner$1@222.98.97.238 -p $((50000 + $1)) -i ~/.ssh/miner.pem }
+ssh_minerB() { ssh miner$1@goldrush.iptime.org -p $((50000 + $1)) -i ~/.ssh/miner.pem }
