@@ -1,3 +1,4 @@
+# puppeth
 export CONFIG_HOME=~/config
 export EDITOR=vim
 
@@ -10,6 +11,7 @@ export ZSH=/Users/PJH/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# ZSH_THEME="af-magic"
 ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -101,8 +103,8 @@ export NVM_DIR="$HOME/.nvm"
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'  # This loads nvm
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
 alias loadpyenv='eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"'
 
 # additional zsh plugin
@@ -116,3 +118,7 @@ export PATH=$PATH:/Users/PJH/workspace/go-ethereum/build/bin
 export GOPATH=$HOME/workspace/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /Users/PJH/workspace/ganache/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/PJH/workspace/ganache/node_modules/tabtab/.completions/electron-forge.zsh
