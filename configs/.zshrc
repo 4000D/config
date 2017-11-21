@@ -116,3 +116,7 @@ export PATH=$PATH:/Users/PJH/workspace/go-ethereum/build/bin
 export GOPATH=$HOME/workspace/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /Users/PJH/workspace/ganache/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/PJH/workspace/ganache/node_modules/tabtab/.completions/electron-forge.zsh
