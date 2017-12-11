@@ -122,3 +122,5 @@ export PATH=$PATH:$GOBIN
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /Users/PJH/workspace/ganache/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/PJH/workspace/ganache/node_modules/tabtab/.completions/electron-forge.zsh
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
