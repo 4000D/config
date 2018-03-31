@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-ln -sf $(pwd)/configs/.?* ~/
+ln -sf $(pwd)/configs/.[!.]* ~/
