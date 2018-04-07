@@ -99,7 +99,6 @@ source $CONFIG_HOME/.aliases.onther
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'  # This loads nvm
 
 # pyenv
@@ -107,9 +106,9 @@ export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 alias loadpyenv='eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"'
 
-# additional zsh plugin
+# additional zsh plugins
 source $ZSH/plugins/enhancd/init.sh
-source ~/.autoenv/activate.sh
+source $ZSH_CUSTOM/plugins/autoenv/activate.sh
 
 # geth path
 export PATH=$PATH:/Users/PJH/workspace/go-ethereum/build/bin
