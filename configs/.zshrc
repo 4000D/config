@@ -62,12 +62,13 @@ CASE_SENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     autoenv git cp history taskwarrior tmux tmuxinator colored-man-pages colorize common-aliases docker npm yarn node golang brew osx
-    alias-tips zsh-autosuggestions
+    alias-tips zsh-autosuggestions zsh-syntax-highlighting
     )
 
 ### Plugin & Theme Installation Commands
-# 0. spaceship theme
+# 0. spaceship theme / Fira font
 # git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" && ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+# git clone https://github.com/tonsky/FiraCode.git $ZSH_CUSTOM/FiraCode && open $ZSH_CUSTOM/FiraCode/distr/ttf
 # 
 # 1. zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -80,6 +81,9 @@ plugins=(
 # 
 # 4. autoenv
 # git clone https://github.com/zpm-zsh/autoenv ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/autoenv
+# 
+# 5. zsh-syntax-highlighting
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ###
 
 source $ZSH/oh-my-zsh.sh
@@ -126,6 +130,8 @@ alias loadpyenv='eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"'
 
 # additional zsh plugins
 source $ZSH_CUSTOM/plugins/enhancd/init.sh
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 # geth path
 export PATH=$PATH:/Users/PJH/workspace/go-ethereum/build/bin
