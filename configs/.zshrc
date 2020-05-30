@@ -6,7 +6,7 @@ export EDITOR=vim
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/PJH/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -60,11 +60,29 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# Unused: nvm pyenv
-plugins=(autoenv git cp history taskwarrior tmux tmuxinator zsh-autosuggestions colored-man-pages colorize common-aliases alias-tips docker npm yarn node go brew osx terminalapp)
+plugins=(
+    autoenv git cp history taskwarrior tmux tmuxinator colored-man-pages colorize common-aliases docker npm yarn node golang brew osx
+    alias-tips zsh-autosuggestions
+    )
+
+### Plugin & Theme Installation Commands
+# 0. spaceship theme
+# git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" && ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+# 
+# 1. zsh-autosuggestions
+# git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# 
+# 2. alias-tips
+# git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/alias-tips
+# 
+# 3. enhancd
+# brew tap jhawthorn/fzy && brew install fzy ccat && git clone https://github.com/b4b4r07/enhancd.git  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/enhancd
+# 
+# 4. autoenv
+# git clone https://github.com/zpm-zsh/autoenv ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/autoenv
+###
 
 source $ZSH/oh-my-zsh.sh
-# source $ZSH/plugins/enhancd/init.sh # below....
 
 # User configuration
 
@@ -107,8 +125,7 @@ export PATH=$PYENV_ROOT/bin:$PATH
 alias loadpyenv='eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"'
 
 # additional zsh plugins
-source $ZSH/plugins/enhancd/init.sh
-source $ZSH_CUSTOM/plugins/autoenv/activate.sh
+source $ZSH_CUSTOM/plugins/enhancd/init.sh
 
 # geth path
 export PATH=$PATH:/Users/PJH/workspace/go-ethereum/build/bin
