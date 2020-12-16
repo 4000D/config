@@ -20,7 +20,6 @@ CASE_SENSITIVE="true"
 # zsh tmux settings
 # ZSH_TMUX_AUTOSTART='true'
 
-
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -61,31 +60,35 @@ CASE_SENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    autoenv git cp history taskwarrior tmux tmuxinator colored-man-pages colorize common-aliases docker npm yarn node golang brew osx
-    alias-tips zsh-autosuggestions zsh-syntax-highlighting
-    )
+  autoenv git cp history taskwarrior tmux tmuxinator colored-man-pages colorize common-aliases docker npm yarn node golang brew osx
+  alias-tips zsh-autosuggestions zsh-syntax-highlighting
+)
 
 ### Plugin & Theme Installation Commands
 # 0. spaceship theme / Fira font
 # git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" && ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 # git clone https://github.com/tonsky/FiraCode.git $ZSH_CUSTOM/FiraCode && open $ZSH_CUSTOM/FiraCode/distr/ttf
-# 
+#
 # 1. zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# 
+#
 # 2. alias-tips
 # git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/alias-tips
-# 
+#
 # 3. enhancd
 # brew tap jhawthorn/fzy && brew install fzy ccat && git clone https://github.com/b4b4r07/enhancd.git  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/enhancd
-# 
+#
 # 4. autoenv
 # git clone https://github.com/zpm-zsh/autoenv ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/autoenv
-# 
+#
 # 5. zsh-syntax-highlighting
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+#
+# 6. tmux
+# brew install tmux
 ###
 
+ZSH_DISABLE_COMPFIX="true"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -121,7 +124,7 @@ source $CONFIG_HOME/.aliases.onther
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'  # This loads nvm
+alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' # This loads nvm
 
 # pyenv
 export PYENV_ROOT=$HOME/.pyenv
@@ -131,7 +134,6 @@ alias loadpyenv='eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"'
 # additional zsh plugins
 source $ZSH_CUSTOM/plugins/enhancd/init.sh
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 
 # geth path
 export PATH=$PATH:/Users/PJH/workspace/go-ethereum/build/bin
