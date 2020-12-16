@@ -86,6 +86,10 @@ plugins=(
 #
 # 6. tmux
 # brew install tmux
+#
+# 7. tmux plugins
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# brew install reattach-to-user-namespace
 ###
 
 ZSH_DISABLE_COMPFIX="true"
@@ -149,3 +153,4 @@ alias loadElectron='[[ -f /Users/PJH/workspace/ganache/node_modules/tabtab/.comp
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
